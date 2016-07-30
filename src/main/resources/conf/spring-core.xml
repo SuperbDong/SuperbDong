@@ -8,54 +8,54 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 	<!-- 配置不扫描的包 -->
-	<context:component-scan base-package="com.atguigu.crm">
+	<context:component-scan base-package="com.superbdong">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 		<context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
 	</context:component-scan>
 	
-	<context:property-placeholder location="classpath:jdbc.properties"/>
-	
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+	<!-- <context:property-placeholder location="classpath:jdbc.properties"/>
+	 -->
+	<!-- <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="user" value="scott"></property>
 		<property name="password" value="orcl"></property>
 		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver"></property>
 		<property name="jdbcUrl" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl"/>
-	</bean>
+	</bean> -->
 	
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<!-- <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-		<!-- 配置mybatis文件的名称和位置 -->
+		配置mybatis文件的名称和位置
 		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
-	</bean>
+	</bean> -->
 	
 	<!-- 配置事务管理器 -->
-	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	<!-- <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
-	</bean>
+	</bean> -->
 
 	<!-- 配置自动扫描的Mapper接口，加入到IOC容器中 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	<!-- <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.atguigu.crm"></property>
-	</bean>
+	</bean> -->
 	
 	<!-- 配置石英任务Bean细节 -->
-	<bean id="jobDetailBean" class="org.springframework.scheduling.quartz.JobDetailBean">
+	<!-- <bean id="jobDetailBean" class="org.springframework.scheduling.quartz.JobDetailBean">
 		<property name="jobClass" value="com.atguigu.quartz.MyQuartzJobBean"/>
-	</bean>
+	</bean> -->
 	
 	<!-- 配置石英任务触发器 -->
-	<bean id="triggerBean" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	<!-- <bean id="triggerBean" class="org.springframework.scheduling.quartz.CronTriggerBean">
 		<property name="jobDetail" ref="jobDetailBean"/>
 		<property name="cronExpression" value="0 0 0 ? * *"/>
-	</bean>
+	</bean> -->
 	
 	<!-- 配置任务调度工厂Bean -->
-	<bean id="triggerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	<!-- <bean id="triggerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>
 				<ref bean="triggerBean"/>
 			</list>
 		</property>
-	</bean>
+	</bean> -->
 	<tx:annotation-driven/>
 </beans>
