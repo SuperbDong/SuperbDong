@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.demo.ssm.dao.OperatorMapper" >
-  <resultMap id="BaseResultMap" type="com.demo.ssm.model.Operator" >
+<mapper namespace="com.superbdong.jelly.OperatorMapper" >
+  <resultMap id="BaseResultMap" type="com.superbdong.jelly.model.Operator" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
@@ -24,7 +24,7 @@
     delete from tb_operator
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.demo.ssm.model.Operator" >
+  <insert id="insert" parameterType="com.superbdong.jelly.model.Operator" >
     insert into tb_operator (id, username, password, 
       name, birthday, sex, sal, 
       address)
@@ -32,7 +32,7 @@
       #{name,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{sex,jdbcType=CHAR}, #{sal,jdbcType=DECIMAL}, 
       #{address,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.demo.ssm.model.Operator" >
+  <insert id="insertSelective" parameterType="com.superbdong.jelly.model.Operator" >
     insert into tb_operator
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -87,7 +87,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.demo.ssm.model.Operator" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.superbdong.jelly.model.Operator" >
     update tb_operator
     <set >
       <if test="username != null" >
@@ -114,7 +114,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.demo.ssm.model.Operator" >
+  <update id="updateByPrimaryKey" parameterType="com.superbdong.jelly.model.Operator" >
     update tb_operator
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},

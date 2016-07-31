@@ -1,11 +1,11 @@
-package com.demo.ssm.service.impl;
+package com.superbdong.jelly.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.demo.ssm.dao.OperatorMapper;
-import com.demo.ssm.model.Operator;
-import com.demo.ssm.service.OperatorService;
+import com.superbdong.jelly.dao.OperatorMapper;
+import com.superbdong.jelly.model.Operator;
+import com.superbdong.jelly.service.OperatorService;
 
 @Service("operatorService")
 public class OperatorServiceImpl implements OperatorService {

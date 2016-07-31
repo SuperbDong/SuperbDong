@@ -6,8 +6,8 @@ import java.util.Date;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.demo.ssm.model.Operator;
-import com.demo.ssm.service.OperatorService;
+import com.superbdong.jelly.model.Operator;
+import com.superbdong.jelly.service.OperatorService;
 
 public class TestCase {
 

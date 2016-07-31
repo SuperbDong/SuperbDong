@@ -1,4 +1,4 @@
-package com.demo.ssm.model;
+package com.superbdong.jelly.model;
 
 import java.math.BigDecimal;
 import java.util.Date;

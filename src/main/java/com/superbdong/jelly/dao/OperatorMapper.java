@@ -1,6 +1,6 @@
-package com.demo.ssm.dao;
+package com.superbdong.jelly.dao;
 
-import com.demo.ssm.model.Operator;
+import com.superbdong.jelly.model.Operator;
 
 public interface OperatorMapper {
 	int deleteByPrimaryKey(Integer id);

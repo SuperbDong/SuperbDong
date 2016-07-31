@@ -58,7 +58,7 @@
 
 	<!-- Spring MyBatis整合配置，扫描DAO -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.demo.ssm.dao"></property>
+		<property name="basePackage" value="com.superbdong.jelly.dao"></property>
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	</bean>
 
@@ -87,7 +87,7 @@
 	<!-- AOP事务管理 -->
 	<aop:config>
 		<aop:pointcut id="transactionPointcut"
-			expression="execution(* com.demo.ssm.service..*Impl.*(..))"></aop:pointcut>
+			expression="execution(* com.superbdong.jelly.service..*Impl.*(..))"></aop:pointcut>
 		<aop:advisor pointcut-ref="transactionPointcut"
 			advice-ref="transactionAdvice"></aop:advisor>
 	</aop:config>

@@ -1,6 +1,6 @@
-package com.demo.ssm.service;
+package com.superbdong.jelly.service;
 
-import com.demo.ssm.model.Operator;
+import com.superbdong.jelly.model.Operator;
 
 public interface OperatorService {
 	int deleteByPrimaryKey(Integer id);
