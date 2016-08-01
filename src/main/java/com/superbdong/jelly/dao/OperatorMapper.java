@@ -1,7 +1,6 @@
 package com.superbdong.jelly.dao;
 
-import com.superbdong.jelly.model.Operator;
-
+/*
 public interface OperatorMapper {
 	int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +13,4 @@ public interface OperatorMapper {
 	int updateByPrimaryKeySelective(Operator record);
 
 	int updateByPrimaryKey(Operator record);
-}
+}*/

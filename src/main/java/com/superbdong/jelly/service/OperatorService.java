@@ -1,7 +1,6 @@
 package com.superbdong.jelly.service;
 
-import com.superbdong.jelly.model.Operator;
-
+/*
 public interface OperatorService {
 	int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +13,4 @@ public interface OperatorService {
 	int updateByPrimaryKeySelective(Operator record);
 
 	int updateByPrimaryKey(Operator record);
-}
+}*/

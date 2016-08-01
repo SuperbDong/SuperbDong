@@ -6,15 +6,13 @@ import java.util.Date;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.superbdong.jelly.model.Operator;
-import com.superbdong.jelly.service.OperatorService;
 
 public class TestCase {
 
 	public static void main(String[] args) {
 		ApplicationContext act = new ClassPathXmlApplicationContext(
 				new String[] { "classpath:conf/spring-core.xml", "classpath:conf/spring-mybatis.xml" });
-		OperatorService operatorService = (OperatorService)act.getBean("operatorService");
+		/*OperatorService operatorService = (OperatorService)act.getBean("operatorService");
 		Operator operator = new Operator();
 		operator.setName("张三");
 		operator.setUsername("zhangsan");
@@ -23,7 +21,7 @@ public class TestCase {
 		operator.setSex("男");
 		operator.setBirthday(new Date());
 		operator.setSal(new BigDecimal(111));
-		operatorService.insert(operator);
+		operatorService.insert(operator);*/
 	}
 
 }

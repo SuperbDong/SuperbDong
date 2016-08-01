@@ -1,12 +1,6 @@
 package com.superbdong.jelly.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import com.superbdong.jelly.dao.OperatorMapper;
-import com.superbdong.jelly.model.Operator;
-import com.superbdong.jelly.service.OperatorService;
-
+/*
 @Service("operatorService")
 public class OperatorServiceImpl implements OperatorService {
 	@Autowired
@@ -42,4 +36,4 @@ public class OperatorServiceImpl implements OperatorService {
 		return operatorMapper.updateByPrimaryKey(record);
 	}
 
-}
+}*/

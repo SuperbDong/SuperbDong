@@ -2,7 +2,7 @@ package com.superbdong.jelly.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
-
+/*
 public class Operator {
 	private Integer id;
 
@@ -83,4 +83,4 @@ public class Operator {
 	public void setAddress(String address) {
 		this.address = address == null ? null : address.trim();
 	}
-}
+}*/
